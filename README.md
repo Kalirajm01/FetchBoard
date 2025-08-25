@@ -6,14 +6,9 @@ Built with **React (frontend)**, **Node.js + Express (backend)**, and **MongoDB 
 
 ---
 
-## Features
+## Deployment Link
 
-- Search GitHub repositories by keyword.  
-- Pagination (5 repositories per page).  
-- Session-based recent searches (clears when tab closes).  
-- Save repositories in MongoDB Atlas.  
-- Responsive, modern UI using pure CSS (Flexbox + Grid).  
-- Loading indicator & error handling.  
+**https://fetch-board.vercel.app/**
 
 ---
 

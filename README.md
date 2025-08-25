@@ -17,6 +17,17 @@ Built with **React (frontend)**, **Node.js + Express (backend)**, and **MongoDB 
 
 ---
 
+## Features
+
+- Search GitHub repositories by keyword.  
+- Pagination (5 repositories per page).  
+- Session-based recent searches (clears when tab closes).  
+- Save repositories in MongoDB Atlas.  
+- Responsive, modern UI using pure CSS (Flexbox + Grid).  
+- Loading indicator & error handling.  
+
+---
+
 ## Tech Stack
 
 - **Frontend:** React, Axios, CSS  
@@ -35,3 +46,10 @@ Built with **React (frontend)**, **Node.js + Express (backend)**, and **MongoDB 
 - MongoDB Atlas account  
 
 ---
+
+- Move to **FetchBoard/frontend**.
+- **npm install** to install dependency for frontend.
+- **npm start** to run frontend. 
+- Move to **FetchBoard/backend**.
+- **npm install** to install dependency for frontend.
+- **node server.js** to run the backend server. 

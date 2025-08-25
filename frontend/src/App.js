@@ -18,7 +18,7 @@ function App() {
     const savedHistory = JSON.parse(sessionStorage.getItem("recentSearches")) || [];
     setHistory(savedHistory);
     // initial health check
-    axios.get("http://localhost:5000/health").then(r => setDbStatus(r.data)).catch(() => setDbStatus({ ok: false, db: "unknown" }));
+    axios.get("https://fetchboard-backend.onrender.com/api/health").then(r => setDbStatus(r.data)).catch(() => setDbStatus({ ok: false, db: "unknown" }));
   }, []);
 
   const saveToHistory = (keyword) => {
@@ -33,7 +33,7 @@ function App() {
     setLoading(true);
     try {
       const res = await axios.get(
-        `http://localhost:5000/search?keyword=${keyword}&page=${pageNumber}`
+        `https://fetchboard-backend.onrender.com/api/search?keyword=${keyword}&page=${pageNumber}`
       );
       setResults(res.data.repos);
       setTotalPages(Math.ceil(res.data.totalCount / RESULTS_PER_PAGE));
@@ -50,7 +50,7 @@ function App() {
     setLoading(true);
     try {
       const res = await axios.get(
-        `http://localhost:5000/repos?page=${pageNumber}&per_page=${RESULTS_PER_PAGE}`
+        `https://fetchboard-backend.onrender.com/api/repos?page=${pageNumber}&per_page=${RESULTS_PER_PAGE}`
       );
       setResults(res.data.repos || []);
       setTotalPages(Math.ceil((res.data.totalCount || 0) / RESULTS_PER_PAGE));
